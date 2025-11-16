@@ -1,55 +1,46 @@
-# ==========================================
-# Voorbeeld opdracht:
-# Declareer twee tuples met de namen ‘tuple_een’ en ‘tuple_twee’.
-# tuple_een krijgt de waarden 1, 2 en 3. tuple_twee krijgt de waarden 4, 5 en 6.
-# Zorg dat je een tuple krijgt met de waarden 1, 2, 3, 4, 5 en 6. Onthoud dat tuples onveranderlijk zijn.
-# ==========================================
 
-tuple_een = (1, 2, 3)
-tuple_twee = (4, 5, 6)
+steden = ("Amsterdam", "Rotterdam", "Utrecht", "Den Haag", "Eindhoven", "Groningen")
+# Loop door de tuple en print elk element afzonderlijk
 
-# je zal een nieuwe tuple variabele moeten declareren. De tuples die al gedeclareerd zijn kunnen niet worden aangepast
-# (zoals een list kan worden aangepast met append, insert en remove).
-combined_tuple = tuple_een + tuple_twee
-print('combined tuple: ', combined_tuple)  # Het resultaat is: (1, 2, 3, 4, 5, 6
+for stad in steden:
+    print(stad)
 
-# ==========================================
-# Opdracht 1:
-# maak een tuple aan met de waarden 'b', 'c', 'a'
-# print de waarden van de tuple in de alfabetische volgorde (a, b, c)
-# Tip: maak gebruik van de indexen van de tuple
-#
-# Verwachte uitkomst:  a b c
-# ==========================================
+# --------------------------------------------------------------------------------------------
 
-tuple_abc = ('b ', 'c ', 'a ')
+tuple1 = (1, 2, 3)
+tuple2 = (4, 5, 6)
+
+# Combineer de twee tuples tot één nieuwe tuple
 
 print()
-print(tuple_abc[2] + tuple_abc[0] + tuple_abc[1])
+print(tuple1 + tuple2)
 
-# ==========================================
-# Opdracht 2:
-# Maak de lijst ‘getal_kwadraat_paar’ aan voor getallen 1 tot en met 5 waarin elk element bestaat uit een tuple die het getal en het bijbehorende kwadraat bevat.
-# Gebruik een list comprehension.
-#
-# Verwachte uitkomst: [(1, 1), (2, 4), (3, 9), (4, 16), (5, 25)]
-# ==========================================
+# --------------------------------------------------------------------------------------------
 
-getal_kwadraat_paar = [(i, i ** 2) for i in range(1, 6)]
+
+# Definieer een tuple met verschillende soorten gegevens (bijvoorbeeld getallen, strings, booleans, etc.)
+
+# Print enkele elementen van de tuple namelijk het eerste, een subset (vanaf index 2 tot index 5) en het laatste element
+
+tuple3 = ("iets",69,None,False,"plop!")
 
 print()
-print(getal_kwadraat_paar)
+print(tuple3[0])
+print(*tuple3[1:4])
+print(tuple3[4])
 
-# =========================================
-# Opdracht 3:
-# Maak een tuple genaamd tuple_count met de waarden 1, 2, 3, 4, 5
-# Draai de volgorde van de getallen om. Zorg dat je een nieuwe tuple krijgt met de waarden 5, 4, 3, 2, 1
-# Tip: Maak gebruik van de reversed() functie
-#
-# Verwachte uitkomst: (5, 4, 3, 2, 1)
-# ==========================================
+# --------------------------------------------------------------------------------------------
 
-tuple_count = (1, 2, 3, 4, 5)
-reverse_count = tuple(reversed(tuple_count))
+
+# Maak een tuple met een naam en een leeftijd
+
+# Pak de gegevens uit de tuple en sla ze op in afzonderlijke variabelen (Wat gebeurt er als je de variabelen in de verkeerde volgorde definieert?)
+
+# Print de uitgepakte variabelen
+
+tuple4 = ("Lion", 40)
+naam, leeftijd = tuple4 # Bij een verkeerde volgorde krijgen de variabelen de verkeerde waarden.
+
 print()
-print(reverse_count)
+print("Naam:", naam)
+print("Leeftijd:", leeftijd)
